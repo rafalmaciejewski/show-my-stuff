@@ -8,6 +8,9 @@ export function getRepositoryFromRemotes(
   initialProvider: Provider = 'unknown',
 ): Repository {
   const origin = remotes.find((remote) => remote.name === 'origin');
+  if (!origin) {
+    throw new Error('origin not found');
+  }
   const ref = origin.refs.fetch ?? origin.refs.push;
 
   const [protocol, repositoryUrl, org, project] = extract(ref);

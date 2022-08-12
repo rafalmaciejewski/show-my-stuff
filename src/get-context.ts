@@ -14,6 +14,9 @@ export async function getContext(
     git.getConfig('user.name'),
     git.getConfig('user.email'),
   ]);
+  if (!userName || !userEmail) {
+    throw new Error('user.name or user.email git options are not configured');
+  }
   const repository = getRepositoryFromRemotes(remotes, provider);
   return {
     linkPattern: pattern ?? linkPatternsByProvider[repository.type],
