@@ -1,4 +1,4 @@
-# show-my-stuff
+# `show-my-stuff`
 
 [![npm version](https://badge.fury.io/js/show-my-stuff.svg)](https://badge.fury.io/js/show-my-stuff)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://badges.mit-license.org)
